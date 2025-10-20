@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '../styles/effects.css';
+
 @layer base {
   :root {
     --background-start-hsl: 228 17% 9%;

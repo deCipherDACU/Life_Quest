@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useUser } from '@/context/UserContext';
 import { GlassCard, AnimatedBackground } from '@/components/ui/glass-card';
-import { RadialProgress, Progress3D } from '@/components/ui/advanced-progress';
+import { RadialProgress, Progress3D, XPGainAnimation, MicroInteractionButton } from '@/components/ui/advanced-progress';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -13,6 +13,8 @@ import {
   Sword, Shield, Brain, Eye, Wind
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { HeatmapCalendar } from '@/components/analytics/HeatmapCalendar';
+import { CompactTimeline } from '@/components/analytics/TimelineView';
 
 interface StatCardProps {
   title: string;
