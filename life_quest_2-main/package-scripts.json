@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "setup-backend": "tsx src/scripts/setup-backend.ts",
+    "dev:backend": "npm run setup-backend && npm run dev",
+    "build:check": "npm run typecheck && npm run build"
+  }
+}

@@ -1,0 +1,232 @@
+
+/* Container */
+.nt__wrap {
+  font-family: var(--font-body);
+  color: hsl(var(--foreground));
+  border-radius: var(--radius);
+}
+
+/* Toolbar */
+.nt__toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.nt__search {
+    flex-grow: 1;
+    min-width: 150px;
+}
+.nt__search input {
+  width: 100%;
+  max-width: 320px;
+}
+
+.nt__controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Table */
+.nt__table {
+  width: 100%;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  overflow: auto;
+  background: hsl(var(--card) / 0.5);
+  backdrop-filter: blur(12px);
+}
+.nt__thead, .nt__tbody { width: 100%; }
+.nt__tr {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(180px, 1fr);
+  align-items: stretch;
+  transition: background-color 0.2s;
+}
+.nt__tbody .nt__tr:hover {
+    background-color: hsl(var(--muted) / 0.5);
+}
+
+.nt__th, .nt__td {
+  border-bottom: 1px solid hsl(var(--border));
+  padding: 0;
+}
+.nt__tbody .nt__tr:last-child .nt__td {
+    border-bottom: none;
+}
+
+.nt__th:last-child, .nt__td:last-child { border-right: none; }
+.nt__thInner {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem;
+  background: hsl(var(--muted) / 0.5);
+  border-right: 1px solid hsl(var(--border));
+  font-family: var(--font-headline);
+}
+.nt__th--ghost { background: hsl(var(--muted) / 0.5); border-right: none;}
+.nt__thName {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  width: 100%;
+  outline: none;
+  color: hsl(var(--foreground));
+}
+.nt__thActions { display: flex; gap: 0.25rem; }
+
+.nt__iconBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--radius);
+  color: hsl(var(--muted-foreground));
+}
+.nt__iconBtn:hover { color: hsl(var(--foreground)); background-color: hsl(var(--accent) / 0.1); }
+
+.nt__td {
+  padding: 0.25rem 0.5rem;
+  border-right: 1px solid hsl(var(--border));
+  display: flex;
+  align-items: center;
+}
+.nt__td--actions {
+  width: 44px;
+  min-width: 44px;
+  justify-content: center;
+}
+.nt__cellInput, .nt__cellSelect {
+  width: 100%;
+  padding: 0.375rem 0.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  outline: none;
+  background: transparent;
+  color: hsl(var(--foreground));
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 0.875rem;
+}
+.nt__cellInput:focus, .nt__cellSelect:focus {
+  border-color: hsl(var(--ring));
+  background: hsl(var(--background));
+}
+.nt__cellInput[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.nt__cellCheckbox { display: flex; justify-content: center; width: 100%; }
+.nt__cellCheckbox input { accent-color: hsl(var(--primary)); }
+.nt__cellSelect {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1em;
+    padding-right: 2rem;
+}
+
+
+.nt__empty {
+  padding: 1.25rem;
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+}
+.nt__btnLink {
+  border: none;
+  background: none;
+  color: hsl(var(--primary));
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 0.5rem;
+}
+
+
+/* Column menu */
+.nt__menu {
+  position: absolute;
+  z-index: 5;
+  margin-top: 0.375rem;
+  padding: 0.625rem;
+  width: 260px;
+  background: hsl(var(--popover));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  color: hsl(var(--popover-foreground));
+}
+.nt__menuRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.nt__menuRow select {
+    background: hsl(var(--input));
+    border: 1px solid hsl(var(--border));
+    padding: 0.25rem;
+    border-radius: calc(var(--radius) - 4px);
+    color: hsl(var(--foreground));
+    font-size: 0.875rem;
+}
+.nt__menuDivider {
+  height: 1px;
+  background: hsl(var(--border));
+  margin: 0.5rem 0;
+}
+.nt__danger {
+  width: 100%;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid hsl(var(--destructive) / 0.5);
+  background: hsl(var(--destructive) / 0.2);
+  border-radius: var(--radius);
+  color: hsl(var(--destructive));
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.nt__danger:hover {
+    background: hsl(var(--destructive) / 0.3);
+}
+
+/* Select options editor */
+.nt__optEditor { display: grid; gap: 0.375rem; }
+.nt__optList { display: flex; gap: 0.375rem; flex-wrap: wrap; }
+.nt__optChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.125rem 0.5rem;
+  background: hsl(var(--muted));
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.nt__chipX {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: hsl(var(--muted-foreground));
+}
+.nt__optAdd { display: flex; gap: 0.375rem; }
+.nt__optAdd input {
+  flex: 1;
+  padding: 0.375rem 0.5rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-size: 0.875rem;
+}
+.nt__optAdd button {
+  padding: 0.375rem 0.625rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  cursor: pointer;
+}

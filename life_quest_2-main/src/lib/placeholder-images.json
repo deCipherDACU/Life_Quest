@@ -1,0 +1,16 @@
+{
+  "placeholderImages": [
+    {
+      "id": "user-avatar",
+      "description": "User's character avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1724435811349-32d27f4d5806?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9maWxlJTIwYXZhdGFyfGVufDB8fHx8MTc1OTU1MzIyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "profile avatar"
+    },
+    {
+      "id": "boss-image",
+      "description": "Image of the weekly boss",
+      "imageUrl": "https://images.unsplash.com/photo-1581023701827-b50cbca3cb18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmYW50YXN5JTIwZHJhZ29ufGVufDB8fHx8MTc1OTYyMjI0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fantasy dragon"
+    }
+  ]
+}
