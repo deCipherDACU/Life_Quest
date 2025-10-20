@@ -6,6 +6,7 @@ import PageHeader from "@/components/shared/PageHeader";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import StatCard from "@/components/dashboard/StatCard";
 import { Coins, Flame, Shield, Star, Trophy, Edit, Save, X, User as UserIcon, Brain, Palette, Upload, Heart, Zap, Package, Crown, Sword } from "lucide-react";
+import { InteractiveSkillTree } from "@/components/character/InteractiveSkillTree";
 import SkillTree from "@/components/character/SkillTree";
 import { useUser } from "@/context/UserContext";
 import { format } from "date-fns";
@@ -312,8 +313,7 @@ export default function CharacterPage() {
                 </CardContent>
             </Card>
 
-            <h3 className="text-2xl font-bold font-headline mb-4">Stats</h3>
-            <SkillTree />
+            <InteractiveSkillTree />
         </>
     );
 }
